@@ -108,7 +108,7 @@
 
         .profile-background {
             height: 200px;
-            background-image: url('https://via.placeholder.com/800x200');
+            background-image: url('./image.png');
             background-size: cover;
             position: relative;
         }
@@ -119,7 +119,7 @@
             left: 0;
             right: 0;
             height: 60px;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(226, 223, 223, 0.6));
         }
 
         .profile-info {
@@ -330,34 +330,47 @@
         .connection-avatar {
             width: 48px;
             height: 48px;
-            margin-right: 16px;
             border-radius: 50%;
+            margin-right: 12px;
         }
 
-        .connection-info p {
-            margin-bottom: 4px;
-        }
-
-        .connection-button {
-            background-color: transparent;
-            color: #0a66c2;
-            border: 1px solid #0a66c2;
-            padding: 4px 8px;
-            border-radius: 16px;
-            font-size: 12px;
+        .connection-details h3 {
+            font-size: 14px;
             font-weight: 600;
-            margin-left: auto;
+        }
+
+        .connection-details p {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .btn-connect {
+            background-color: #0a66c2;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 16px;
+            font-size: 14px;
             cursor: pointer;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #f3f2ef;
+            padding: 16px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <div class="header-content container">
             <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">
+                <img src="./logo.png" alt="LinkedIn Logo">
             </div>
             <div class="search-bar">
                 <input type="text" class="search-input" placeholder="Search">
@@ -368,122 +381,154 @@
                     Home
                 </div>
                 <div class="nav-icon">
-                    <i class="fas fa-users"></i>
-                    Network
+                    <i class="fas fa-user-friends"></i>
+                    My Network
                 </div>
                 <div class="nav-icon">
                     <i class="fas fa-briefcase"></i>
                     Jobs
                 </div>
+                <div class="nav-icon">
+                    <i class="fas fa-comment-dots"></i>
+                    Messaging
+                </div>
+                <div class="nav-icon">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </div>
+                <div class="nav-icon">
+                    <i class="fas fa-user-circle"></i>
+                    Me
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Main content -->
-    <div class="container main-content">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <!-- Profile Card -->
-            <div class="profile-card">
-                <div class="profile-background">
-                    <div class="profile-background-overlay"></div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-background">
+                        <div class="profile-background-overlay"></div>
+                    </div>
+                    <div class="profile-info">
+                        <img src="/oldman.jpg" alt="Profile Picture" class="profile-picture">
+                        <h1 class="profile-name">Rajiv Mehta</h1>
+                        <p class="profile-headline">CEO at FinSecure | FinTech Leader</p>
+                        <p class="profile-location">Mumbai, Maharashtra, India</p>
+                        <p class="profile-connections">500+ connections</p>
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">Connect</button>
+                            <button class="btn btn-secondary">Message</button>
+                            <button class="btn btn-tertiary">More</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <img class="profile-picture" src="./oldman.jpg" alt="Profile Picture">
-                    <h2 class="profile-name">John Doe</h2>
-                    <p class="profile-headline">Software Engineer | Full Stack Developer</p>
-                    <p class="profile-location">San Francisco, CA</p>
-                    <p class="profile-connections">500+ connections</p>
-                    <div class="profile-actions">
-                        <button class="btn btn-primary">Connect</button>
-                        <button class="btn btn-secondary">Message</button>
-                        <button class="btn btn-tertiary">More</button>
+
+                <!-- About Section -->
+                <div class="about-section">
+                    <h2 class="section-title">About</h2>
+                    <p>Rajiv Mehta is a prominent figure in the fintech industry, known for his pioneering work in digital payment solutions. With a strong background in technology and business, he founded FinSecure in 2015, where he developed innovative products like UPI-based payment systems and biometric security protocols. He is passionate about financial literacy and technology accessibility, and continues to shape the future of fintech through his leadership and vision.</p>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="experience-section">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-item">
+                        <img src="./experience.png" alt="Company Logo" class="experience-logo">
+                        <div class="experience-details">
+                            <h3>CEO at FinSecure</h3>
+                            <p>2015 - Present | Mumbai, Maharashtra, India</p>
+                            <p>Leading the development of secure and user-friendly digital payment solutions, including a revolutionary UPI-based payment gateway and advanced biometric payment systems. Under my leadership, FinSecure has grown into one of India's most trusted fintech companies.</p>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <img src="./activity.png" alt="Company Logo" class="experience-logo">
+                        <div class="experience-details">
+                            <h3>VP of Technology, Global Bank</h3>
+                            <p>2010 - 2015 | Mumbai, Maharashtra, India</p>
+                            <p>Managed technology infrastructure and digital transformation initiatives, playing a key role in modernizing the bank's payment systems and security protocols.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skill-item">FinTech Solutions</div>
+                    <div class="skill-item">Digital Payment Systems</div>
+                    <div class="skill-item">Biometric Security</div>
+                    <div class="skill-item">UPI Integration</div>
+                    <div class="skill-item">Financial Technology Strategy</div>
+                </div>
+
+                <!-- Projects Section -->
+                <div class="projects-section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="project-item">
+                        <h3 class="project-title">UPI-Based Payment Gateway</h3>
+                        <p class="project-description">Developed a secure and user-friendly UPI-based payment gateway that revolutionized digital transactions in India.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3 class="project-title">Biometric Payment Systems</h3>
+                        <p class="project-description">Led the development of cutting-edge biometric payment systems, enhancing security and user experience in digital transactions.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- About Section -->
-            <div class="about-section">
-                <h2 class="section-title">About</h2>
-                <p>
-                    Passionate software engineer with over 5 years of experience in full stack development. Skilled in
-                    developing
-                    web applications using modern technologies like React, Node.js, and Express. Dedicated to delivering
-                    efficient,
-                    scalable, and user-friendly solutions.
-                </p>
-            </div>
-
-            <!-- Experience Section -->
-            <div class="experience-section">
-                <h2 class="section-title">Experience</h2>
-                <div class="experience-item">
-                    <img class="experience-logo" src="./experience.png" alt="Company Logo">
-                    <div class="experience-details">
-                        <h3>Senior Software Engineer</h3>
-                        <p>Google | Jan 2020 - Present</p>
-                        <p>Working on building scalable solutions for cloud-based systems and enhancing user experience
-                            on
-                            Google Cloud Platform.</p>
+            <!-- Sidebar Section -->
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <h2 class="sidebar-title">Connections</h2>
+                    <div class="connection-item">
+                        <img src="./priya.jpeg" alt="Connection Avatar" class="connection-avatar">
+                        <div class="connection-details">
+                            <h3>Priya Sharma</h3>
+                            <p>VP of Marketing at FinSecure</p>
+                        </div>
+                        <button class="btn-connect">Connect</button>
+                    </div>
+                    <div class="connection-item">
+                        <img src="./amit.jpg" alt="Connection Avatar" class="connection-avatar">
+                        <div class="connection-details">
+                            <h3>Amit Patel</h3>
+                            <p>CTO at FinSecure</p>
+                        </div>
+                        <button class="btn-connect">Connect</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Skills Section -->
-            <div class="skills-section">
-                <h2 class="section-title">Skills</h2>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">React.js</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Python</div>
-            </div>
-
-            <!-- Activities Section -->
-            <div class="activities-section">
-                <h2 class="section-title">Activities</h2>
-                <div class="activity-item">
-                    <img class="activity-logo" src="./activity.png" alt="Activity Logo">
-                    <div class="activity-details">
-                        <h3>Volunteer at Code for Good</h3>
-                        <p>Providing mentorship and technical support for open-source projects aimed at community
-                            welfare.</p>
+                <div class="sidebar-card">
+                    <h2 class="sidebar-title">Recent Posts</h2>
+                    <div class="activity-item">
+                        <img src="./image.png" alt="Activity Logo" class="activity-logo">
+                        <div class="activity-details">
+                            <h3>Rajiv Mehta</h3>
+                            <p>Excited to announce the launch of our new biometric payment system, a game-changer for secure transactions.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Projects Section -->
-            <div class="projects-section">
-                <h2 class="section-title">Projects</h2>
-                <div class="project-item">
-                    <h3 class="project-title">E-commerce Web App</h3>
-                    <p class="project-description">Developed a full-fledged e-commerce platform using React, Node.js, and
-                        MongoDB.</p>
-                </div>
-                <div class="project-item">
-                    <h3 class="project-title">Machine Learning Model</h3>
-                    <p class="project-description">Created a recommendation system for movie suggestions using Python
-                        and
-                        TensorFlow.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sidebar Section -->
-        <div class="sidebar">
-            <!-- Connection Recommendations -->
-            <div class="sidebar-card">
-                <h2 class="sidebar-title">People also viewed</h2>
-                <div class="connection-item">
-                    <img class="connection-avatar" src="./man.jpeg" alt="Connection 1">
-                    <div class="connection-info">
-                        <p class="connection-name">Jane Smith</p>
-                        <p class="connection-headline">Full Stack Developer at Microsoft</p>
+                    <div class="activity-item">
+                        <img src="https://via.placeholder.com/48" alt="Activity Logo" class="activity-logo">
+                        <div class="activity-details">
+                            <h3>Rajiv Mehta</h3>
+                            <p>Spoke at the Global FinTech Conference about the future of digital payments and the role of biometric technology.</p>
+                        </div>
                     </div>
-                    <button class="btn btn-secondary connection-button">Connect</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 LinkedIn Replica. All rights reserved.</p>
+    </footer>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </body>
 
 </html>
